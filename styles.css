@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f5ff;
+    background-image: linear-gradient(to bottom, #b7dcfd, #ffffff); /* Gradient from blue to white */
+    margin: 0;
+    padding: 20px;
+    width: 320px; /* Change this value to your desired width */
+    height: 220px; /* Change this value to your desired height */
+  }
+  
+  #mainSection {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom to create space between sections */
+  }
+
+  #closingMode {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom to create space between sections */
+  }
+
+  h1 {
+    color: #333;
+    font-size: 24px; /* Larger font size */
+  }
+  
+  .popup-content {
+    margin-top: 20px;
+  }
+  
+  #inputSection {
+    display: inline-block; /* Make input section inline */
+    margin-top: 20px;
+  }
+
+  #buttonContainer {
+    display: inline-block; /* Make button container inline */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Dark blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
+  #closingMode {
+    color: #333;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  #closingMode input[type="radio"],
+#closingMode label {
+  display: inline-block;
+}
+  
+  label[for="most recent"], label[for="least active"] {
+    margin-right: 10px;
+  }
+
+  .success-message {
+    display: inline-block; /* Make button container inline */
+
+    color: green; /* Color of success message */
+    margin-left: 10px; /* Adjust as needed for spacing */
+  }
+
+/* CSS for notification message */
+.notification {
+    position: absolute;
+    top: -50px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* Ensure the notification appears above other content */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.5s ease, top 0.5s ease; /* Add transition effect for opacity and top */
+  }
+  
+  /* Class for slide-in animation */
+  .slide-in {
+    top: 0; /* Slide in from the top */
+    opacity: 1; /* Fade in */
+  }
+  
+  /* Class for fade-out animation */
+  .fade-out {
+    opacity: 0; /* Fade out */
+  }

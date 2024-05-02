@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Input Extension</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="mainSection">
+      <h1>Tab Tamer</h1>
+      <div class="popup-content"> 
+        <div id="tabsNumber">Current tabs:</div>
+        <!-- Clicking Behavior: Clicking on the label will focus on the associated form element. 
+          This makes it easier for users to interact with form elements, especially on devices with touch interfaces.-->
+        <div id="inputSection">
+          <label for="numberInput" id="maxTabLabel">Maximum tabs:</label>
+          <input type="number" id="numberInput" value="10">
+          <button id="submitButton">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="closingMode"> 
+      <!--In HTML, the value attribute is used to specify the value that gets 
+        submitted to the server when the form is submitted and the radio button is selected.-->
+
+        <!-- When radio buttons share the same name attribute, only one
+            radio button within that group can be selected at a time.-->
+        <!-- MAKE SURE ID MATCH WITH THE VALUE-->
+      <input type="radio" id="most recent" name = "mode" value="most recent" checked>
+      <label for="most recent">Close Most Recent Tab</label><br>
+      <input type="radio" id="least active" name = "mode" value="least active">
+      <label for="least active">Close Least Active Tab</label><br>
+    </div>
+
+    <!-- script src="background.js"></script -->
+    <script src="content.js"></script>
+  </body>
+</html>
