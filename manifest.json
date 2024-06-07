@@ -4,11 +4,13 @@
     "description": "Base Level Extension",
     "version": "1.0",
     "background": {
-      "service_worker": "background.js"
+      "service_worker": "background.js",
+      "type": "module"
     },
     "permissions": [
       "activeTab",
-      "storage"
+      "storage",
+      "tabs"
     ],
     "action": {
       "default_popup": "popup.html",

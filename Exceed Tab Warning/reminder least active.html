@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tab Limit Reached</title>
+        <style>
+body {
+                background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+                color: #ec942c;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .header {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                background-color: #a0d1f3cf;
+                padding: 20px 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .header img {
+                height: 40px;
+                margin-right: 16px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+                margin: 0;
+                color: #005b96;
+            }
+            .container {
+                padding: 80px; /* Increased padding */
+                border-radius: 10px;
+                background-color: #ffffffcf;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                max-width: 600px; /* Increased max-width */
+            }
+            .main-section h1 {
+                font-size: 3rem; /* Increased font size */
+                margin-bottom: 40px; /* Increased margin */
+            }
+            .auto-close-section {
+                font-size: 1.2rem; /* Increased font size */
+                color: #000000;
+            }
+
+            #following-tab-text {
+                color: #333;
+                font-size: 1.4rem;
+                margin-bottom: 8px;
+            }
+
+            #tab-to-close {
+                color: #005b96;
+                font-weight: bold;
+                /*background-color: #ecec2c; */
+                font-size: 1.2rem;
+            }
+            .action-buttons {
+                margin-top: 12px;
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: #007bff; /* Dark blue color */
+                color: #fff;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin: 8px;
+                font-size: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+            }
+
+            #undoButton {
+                font-weight: bold;
+                background-color: #167d0b; /* Dark blue color */
+            }
+
+        </style>
+        <script src="reminder-content-script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <img src="../tab blue alt.png" alt="Logo">
+            <h1>Tab Tamer</h1>
+        </div>
+        <div class="container">
+            <div class="main-section">
+                <h1>Tab Limit Reached!</h1>
+                <div id="following-tab-text">The following tab will be closed:</div>
+                <div id="tab-to-close"></div>
+                <div class="action-buttons">
+                    <button id="confirmButton">Confirm</button>
+                    <button id="undoButton">Undo</button>
+                </div>
+            </div>
+        </div>
+        <p class="auto-close-section"><strong>The tab will be removed</strong> in 15 seconds...</p>
+    </body>
+</html>

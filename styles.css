@@ -5,7 +5,34 @@ body {
     margin: 0;
     padding: 20px;
     width: 320px; /* Change this value to your desired width */
-    height: 220px; /* Change this value to your desired height */
+    height: 240px; /* Change this value to your desired height */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px; /* Add padding inside the header */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+
+  .header h1 {
+    color: #333;
+    font-size: 24px; /* Larger font size */
+    margin: 0;
+  }
+
+  .more-options {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(39, 81, 188);
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    font-size: 14.5px;
+    text-decoration: underline; /* Underline text */
+    font-weight: bold; /* Make text bolder */
   }
   
   #mainSection {
@@ -15,23 +42,15 @@ body {
     padding: 20px;
     text-align: center;
     font-size: 18px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom to create space between sections */
-  }
-
-  #closingMode {
-    padding: 15px;
-    text-align: center;
-    font-size: 18px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom to create space between sections */
-  }
-
-  h1 {
-    color: #333;
-    font-size: 24px; /* Larger font size */
+    height: 150px;
   }
   
   .popup-content {
     margin-top: 20px;
+  }
+
+  #maxTabLabel {
+    margin-top: 4px;
   }
   
   #inputSection {
@@ -71,23 +90,6 @@ body {
   button:hover {
     background-color: #0056b3; /* Darker shade of blue on hover */
   }
-  
-  #closingMode {
-    color: #333;
-  }
-  
-  input[type="radio"] {
-    margin-right: 5px;
-  }
-
-  #closingMode input[type="radio"],
-#closingMode label {
-  display: inline-block;
-}
-  
-  label[for="most recent"], label[for="least active"] {
-    margin-right: 10px;
-  }
 
   .success-message {
     display: inline-block; /* Make button container inline */
@@ -109,8 +111,10 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     opacity: 0; /* Start with 0 opacity */
-    transition: opacity 0.5s ease, top 0.5s ease; /* Add transition effect for opacity and top */
-  }
+    transition: opacity 0.5s ease, top 0.5s ease; /*transition effect that simultaneously changes the opacity and 
+    vertical position of an element over a period of 0.5 seconds, with a smooth and gradual transition, 
+    opacity and top goals are state below, top: 0 means that's the final vertical position goal when changing from current position (top: -50px;)*/
+}
   
   /* Class for slide-in animation */
   .slide-in {

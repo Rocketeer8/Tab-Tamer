@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More Options</title>
+    <style>
+        h1 {
+            font-size: 24px;
+            color:#333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            width: 320px; /* Change this value to your desired width */
+            height: 240px; /* Change this value to your desired height */
+            margin: 0;
+            padding: 4px 20px 20px 20px;
+        }
+
+         #goBack {
+            margin-top: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(39, 81, 188);
+            border: none;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            font-size: 14.5px;
+            text-decoration: underline; /* Underline text */
+            font-weight: bold; /* Make text bolder */
+        }
+
+        #closingModeTitle {
+            margin-bottom: 8px;
+        }
+
+        #closingMode {
+            margin-top: 10px;
+            font-size: 18px; /* Larger font size */
+            margin-left: 20px;
+        }
+
+        #closingMode input[type="radio"],
+        #closingMode label {
+            display: inline-block;
+        }
+
+        #closingMode {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+  
+        label[for="most recent"], label[for="least active"] {
+            margin-right: 10px;
+        }
+
+        #warningOption {
+            margin-top: 12px;
+            margin-left: 20px;
+            font-size: 16px; /* Larger font size */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>More Options:</h1>
+    <div class="container">
+        <div id="closingMode"> 
+            <!--In HTML, the value attribute is used to specify the value that gets 
+              submitted to the server when the form is submitted and the radio button is selected.-->
+      
+              <!-- When radio buttons share the same name attribute, only one
+                  radio button within that group can be selected at a time.-->
+              <!-- MAKE SURE ID MATCH WITH THE VALUE-->
+            <div id="closingModeTitle">Action when exceeding tab limit:</div>
+            <input type="radio" id="most recent" name = "mode" value="most recent" checked>
+            <label for="most recent">Close Most Recent Tab</label><br>
+            <input type="radio" id="least active" name = "mode" value="least active">
+            <label for="least active">Close Least Active Tab</label><br>
+        </div>
+        <hr>
+        <div id= "warningOption">
+            <label for="warningPopup">
+                <input type="checkbox" id="warningPopup" name="warningPopup" value="warningPopup" checked>
+                Display warning when limit reached
+            </label>
+        </div>
+          <a id = "goBack" href="../popup.html">&lt; Go Back</a>
+    </div>
+
+      <script src="more-options.js"></script>
+</body>
+</html>
